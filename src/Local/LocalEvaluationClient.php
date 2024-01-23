@@ -80,6 +80,14 @@ class LocalEvaluationClient
         return $results;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
+    public function getFlagsConfigs() : array
+    {
+        return $this->flagConfigService->getFlagConfigs();
+    }
+
     private function initializeAssignmentService(?AssignmentConfig $config): void
     {
         if ($config) {
